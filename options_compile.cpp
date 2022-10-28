@@ -197,8 +197,8 @@ std::string EffectiveOptionsFilter::processOptions(const OpenCLArgList &args,
 
   effectiveArgs.push_back(szTriple);
 
-  effectiveArgs.push_back("-include");
-  effectiveArgs.push_back("opencl-c.h");
+  effectiveArgs.push_back("-finclude-default-header");
+  effectiveArgs.push_back("-fdeclare-opencl-builtins");
 
   // Don't optimize in the frontend
   // clang defaults to -O0, and in that mode, does not produce IR that is
